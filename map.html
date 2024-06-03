@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Okan University</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color:  #005293;
+    }
+
+    header {
+      background-color: #00529b;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #0079c1;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #005293;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    img {
+      display: block;
+      margin: auto;
+      background-color: #005293;
+      color:#005293;
+      height: auto;
+    }
+    button {
+      cursor: pointer;
+      padding: 12px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style><style>
+  .logout-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    padding: 8px 12px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .logout-button:hover {
+    background-color: #c82333;
+  }
+</style>
+<button class="logout-button" onclick="logout()">Logout</button>
+
+<script>
+  function logout() {
+    window.location.href = "Mainpage.html";
+  }
+</script>
+</head>
+<body>
+  <header>
+    <h1>Okan University</h1>
+  </header>
+  <img src="https://www.globalacademia.com/wp-content/uploads/okan-university-apply.png" alt="Description of the image">
+  
+  <nav>
+    <a onclick="navigateTo('home')">Home</a>
+    <a onclick="navigateTo('about')">About Us</a>
+    <a onclick="navigateTo('map')">Map</a>
+    <a onclick="navigateTo('contact')">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h2>Welcome to Okan University!</h2>
+    <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3013.3528703668994!2d29.389542376852805!3d40.951847971358575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cad7b50f100fcb%3A0x4bfe6a3dfc7c6a76!2s%C4%B0stanbul%20Okan%20%C3%9Cniversitesi!5e0!3m2!1str!2str!4v1703066216621!5m2!1str!2str"
+    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <script>
+    function navigateTo(page) {
+      // Burada, tıklanan bağlantıya göre yönlendirilecek sayfaları belirtmelisiniz
+      if (page === 'home') {
+        window.location.href = "home.html";
+      } else if (page === 'about') {
+        window.location.href = "about.html";
+      } else if (page === 'map') {
+        window.location.href = "map.html";
+      } else if (page === 'admissions') {
+        window.location.href = "admissions.html";
+      } else if (page === 'contact') {
+        window.location.href = "contact.html";
+      }
+    }
+
+    function openMap() {
+      // Harita bağlantısı
+      window.open('https://www.google.com/maps?q=Okan+University', '_blank');
+    }
+  </script>
+</body>
+</html>
